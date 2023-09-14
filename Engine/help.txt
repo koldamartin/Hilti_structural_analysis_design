@@ -1,0 +1,40 @@
+Hilti designer program v 1.0.0
+
+
+
+Program funguje stejně jako původní excel od J. Hlaváčka na výpočet větru. 
+Navíc umí navrhnout nosníky a posoudit protlačení střšního pláště.
+
+V programu je defaultně nastaven součinitel smykového tření o hodnotě 0,78. Ten se již nemusí zadávat.
+Posoudí se zda nedojde k posunu jednotky po střeše a z toho se určí minimální přitížení konstrukce.
+Pokud je okno "Přepsat přitížení konstrukce" prázdné, počítá se s minimálním přitížením.
+Toto přitížení se dá ovšem přepsat. V závislosti na hodnotě se pak mění i min. rozpětí nosníků.
+
+Stejně tak lze přepsat min. rozpětí nosníků na libovolnou jinou hodnotu.
+Pokud je okno "Přepsat rozpětí nosníků" prázdné, počítá se s minimálním rozpětím nosníků. Slouží jen k posudku nosníků.
+
+Typ uložení jednotek:
+Typ A: "Počet příčných nosníků" musí být roven nebo větší dvěma.
+	Počet patek pro výpočet protlačení střešního pláště je roven čtyřem.
+	Hlavní i vedlejší nosníky se počítají jako prostě podepřené
+
+Typ B: Šířka celé konstrukce, tedy rozpětí hlavních nosníků je "šířka jednotky" + 0,3 m.
+	Je konzervativně uvažováno, že hlavní nosník je zatížen spojitým zatížením, i když většinou to budou spíš dvě bodové síly.
+	Počet patek pro výpočet protlačení střešního pláště je roven čtyřem.
+	Hlavní i vedlejší nosníky se počítají jako prostě podepřené
+
+Typ C: "Počet příčných rámů musí být roven nebo větší třema.  Pro dva rámy použít typ B.
+	Šířka celé konstrukce je "šířka jednotky" + 0,3 m.
+	Počet patek pro výpočet protlačení střešního pláště je roven počtu rámů krát dvě.
+	Hlavní nosník se počítá jako spojitý nosník. Počet polí je roven počtu rámů minus jedna.
+
+Výpočty:
+Program neuvažuje s klopením.
+Program neposuzuje smyk na nosnících.
+Program počítá pouze se svislým zatížením od větru, vodorovné zatížení od větru které způsobuje dvouosý ohyb bude doplněno časem.
+Program neumí počítat se sněhem. Bude doplněno časem
+Pokud neumí vypnout výpočet s větrem. Pokud chcete počítat bez větru, nastavte "Výšku jednotky" jako 0,1 m.
+Program počítá pouze s nosníky MT-40, MT-50, MT-60 a MT-40D. Větší nosníky lze doplnit, když bude zájem.
+Min. rozpětí nosníků se počítá jako maximum z délky nosníku proti překlopení a hloubky jednotky + 0,2m.
+
+
