@@ -1,2 +1,2 @@
-# Hilti_structural_analysis_design
-A Tool for structural design of Hilti steel structures
+A desktop app with a graphical interface made in Tkinter. It is a useful tool to quickly and easily design substructures for air conditioning units on rooftops.
+
